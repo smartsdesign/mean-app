@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-    res.render('index', { title: 'A MEAN (MongoDB, ExpressJS, AngularJS, and NodeJS) app' });
+    res.render('index', { title: 'A MEAN app hosted by Heroku' });
 });
 
 //route to about us page
