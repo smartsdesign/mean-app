@@ -1,0 +1,22 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.wrapper {
+	width: 85%;
+	margin: auto;
+	max-width: 1200px;
+}
+
+.main-header { 
+	padding: 30px 10px; 
+}
+
+.main-header h1 {
+	font-size: 25px;
+	margin-top: 0;
+}
+
+a {
+  color: #00B7FF;
+}
