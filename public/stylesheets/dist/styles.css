@@ -129,6 +129,7 @@ body .wrapper .main-header .container {
 }
 body .wrapper .main-header h1 {
   font-size: 35px;
+  text-align: center;
 }
 body .wrapper ul {
   margin-bottom: 20px;
