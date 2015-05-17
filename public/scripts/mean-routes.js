@@ -17,13 +17,14 @@
 
 		$routeProvider
 			.when('/', {
-				"templateUrl": "ng-views/index.html"
-			})
-			.when('/about', {
-				"templateUrl": "ng-views/about.html"
+				"templateUrl": "ng-views/index.html",
+				"controller": "contactsController",
+				"controllerAs": "main"
 			})
 			.when('/name/:contact', {
-				"templateUrl": "ng-views/contact.html"
+				"templateUrl": "ng-views/contact.html",
+				"controller": "contactController",
+				"controllerAs": "contact"
 			})
 			.otherwise({
 				redirectTo: '/'

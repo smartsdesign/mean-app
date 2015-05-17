@@ -6,18 +6,20 @@
 			'meanRoutes',
 			'meanAppService'
 		])
-		.controller('contactsController', [ 
-			'$scope', 
+		.controller('contactsController', [
+			"$rootScope",  
 			'$log', 
 			'getContactsService', 
 			contactsController 
 		]);
 
-	function contactsController($scope, $log, getContactsService){
+	function contactsController($rootScope, $log, getContactsService){
 		
+		var vm = this;
+
 		var onSuccess = function(data){
-			$scope.contacts = data[0].contacts;
-			$log.log($scope.contacts);
+			vm.contacts = data[0].contacts;
+			$log.log(vm.contacts);
 		};
 
 		var onErr = function(reason){
