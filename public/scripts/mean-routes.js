@@ -5,6 +5,7 @@
 		.module('meanRoutes', [
 			'ngRoute',
 			'meanMainCtrl',
+			'aboutCtrl',
 			'meanContactCtrl'
 		])
 		.config([
@@ -21,6 +22,11 @@
 				"controller": "contactsController",
 				"controllerAs": "main"
 			})
+			.when('/about', {
+				"templateUrl": "ng-views/about.html",
+				"controller": "aboutController",
+				"controllerAs": "about"
+			})
 			.when('/name/:contact', {
 				"templateUrl": "ng-views/contact.html",
 				"controller": "contactController",
@@ -31,7 +37,7 @@
 			});
 
 		$locationProvider.html5Mode({
-			enbled: true
+			enabled: true
 		});
 	}
 
