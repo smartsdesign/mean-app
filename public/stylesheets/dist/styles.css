@@ -226,8 +226,29 @@ body .wrapper ul li.active:focus .list-group-item-text {
     margin-left: 25%;
   }
 }
+body .wrapper ul li:nth-child(odd) {
+  background-color: #dcdcdc;
+}
+body .wrapper ul li:nth-child(even) {
+  background-color: #d0cccc;
+}
 @media (max-device-width: 767px) {
   body .wrapper p {
     font-size: 2.5rem;
   }
+}
+body .wrapper a:link,
+body .wrapper a:visited {
+  text-decoration: none;
+  border-bottom: 1px dashed #888;
+}
+@media (max-device-width: 767px) {
+  body .wrapper a:link,
+  body .wrapper a:visited {
+    font-size: 2.5rem;
+  }
+}
+body .wrapper a:hover,
+body .wrapper a:active {
+  border-bottom: none;
 }
