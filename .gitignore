@@ -2,4 +2,6 @@ node_modules/bootstrap
 Gruntfile.js
 node_modules/grunt-contrib-less/
 node_modules/grunt/
+node_modules/.bin/grunt
+node_modules/grunt-cli/
 public/stylesheets/less/

@@ -82,6 +82,13 @@ body .wrapper {
   width: 85%;
   margin: auto;
   max-width: 1200px;
+  background: #eeeeee;
+  padding: 0 23px 26px;
+}
+@media (max-device-width: 767px) {
+  body .wrapper {
+    width: auto;
+  }
 }
 body .wrapper .main-header {
   padding: 30px 15px;
@@ -133,12 +140,12 @@ body .wrapper .main-header h1 {
 }
 @media (max-device-width: 767px) {
   body .wrapper .main-header h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 }
 @media (max-device-width: 767px) {
   body .wrapper h4 {
-    font-size: 2.5rem;
+    font-size: 0.5rem;
   }
 }
 body .wrapper ul {
@@ -160,10 +167,12 @@ body .wrapper ul li {
   border: 1px solid #dddddd;
   position: relative;
   float: left;
-  width: 100%;
+  width: 83.33333333%;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
+  margin-left: 8.33333333%;
+  margin-bottom: 5px;
 }
 body .wrapper ul li:first-child {
   border-top-right-radius: 4px;
@@ -225,12 +234,6 @@ body .wrapper ul li.active:focus .list-group-item-text {
   body .wrapper ul li {
     margin-left: 25%;
   }
-}
-body .wrapper ul li:nth-child(odd) {
-  background-color: #dcdcdc;
-}
-body .wrapper ul li:nth-child(even) {
-  background-color: #d0cccc;
 }
 @media (max-device-width: 767px) {
   body .wrapper p {
