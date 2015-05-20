@@ -255,10 +255,11 @@ body .wrapper ul li a figure {
   width: 100px;
   position: relative;
   float: left;
-  width: 100%;
+  width: 50%;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
+  margin-left: 25%;
 }
 @media (min-width: 992px) {
   body .wrapper ul li a figure {
@@ -273,10 +274,11 @@ body .wrapper ul li a div {
   box-sizing: border-box;
   position: relative;
   float: left;
-  width: 100%;
+  width: 66.66666667%;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
+  margin-left: 16.66666667%;
 }
 @media (min-width: 992px) {
   body .wrapper ul li a div {
