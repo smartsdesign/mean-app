@@ -2,9 +2,15 @@
 	<p>There are {{main.contacts.length}} contacts</p>
 	<ul>
 		<li ng-repeat="contact in main.contacts">
-			<p><span>Name: </span> {{contact.firstName}} {{contact.lastName}}</p>
-			<p><span>Email: </span>{{contact.email}}</p>
-			<p><span>Tel: </span>{{contact.tel}}</p>
+            <a href="">
+                <figure>
+                    <img ng-src="{{contact.profImgUrl}}" alt="{{contact.firstName}} {{contact.lastName}}">
+                </figure>
+                <div>
+                    <p>{{contact.firstName}} {{contact.lastName}}</p>
+                    <p>{{contact.profession}}</p>
+                </div>
+            </a>
 		</li>
 	</ul>
 	<a href="/about">Authored by: Samson Muhangi</a>
