@@ -249,6 +249,10 @@ body .wrapper ul li a:link,
 body .wrapper ul li a:visited {
   border: none;
 }
+body .wrapper ul li a:hover,
+body .wrapper ul li a:active {
+  opacity: 0.5;
+}
 body .wrapper ul li a figure {
   box-sizing: border-box;
   margin: 0;
@@ -265,6 +269,11 @@ body .wrapper ul li a figure {
   body .wrapper ul li a figure {
     float: left;
     width: 25%;
+  }
+}
+@media (min-width: 992px) {
+  body .wrapper ul li a figure {
+    margin-left: 0%;
   }
 }
 body .wrapper ul li a figure img {
@@ -284,6 +293,11 @@ body .wrapper ul li a div {
   body .wrapper ul li a div {
     float: left;
     width: 50%;
+  }
+}
+@media (min-width: 992px) {
+  body .wrapper ul li a div {
+    margin-left: 0%;
   }
 }
 body .wrapper ul li a div p {
