@@ -52,6 +52,8 @@
 .panel-body:after,
 .modal-footer:before,
 .modal-footer:after,
+body .wrapper:before,
+body .wrapper:after,
 body .wrapper ul:before,
 body .wrapper ul:after,
 body .wrapper ul li a:before,
@@ -73,6 +75,7 @@ body .wrapper ul li a:after {
 .pager:after,
 .panel-body:after,
 .modal-footer:after,
+body .wrapper:after,
 body .wrapper ul:after,
 body .wrapper ul li a:after {
   clear: both;
@@ -80,13 +83,15 @@ body .wrapper ul li a:after {
 body {
   font-size: 14px;
   font-family: consolas, sans-serif;
+  background: #eeeeee;
 }
 body .wrapper {
   box-sizing: border-box;
   width: 85%;
+  margin-left: -15px;
+  margin-right: -15px;
   margin: auto;
   max-width: 1200px;
-  background: #eeeeee;
   padding: 0 23px 26px;
 }
 @media (max-device-width: 767px) {
@@ -99,6 +104,7 @@ body .wrapper .main-header {
   margin-bottom: 30px;
   color: inherit;
   background-color: #eeeeee;
+  margin-bottom: 0;
 }
 body .wrapper .main-header h1,
 body .wrapper .main-header .h1 {
@@ -135,7 +141,7 @@ body .wrapper .main-header .container {
 }
 @media (min-width: 768px) {
   body .wrapper .main-header {
-    padding: 30px 10px;
+    padding: 0 10px;
   }
 }
 body .wrapper .main-header h1 {
@@ -145,6 +151,30 @@ body .wrapper .main-header h1 {
 @media (max-device-width: 767px) {
   body .wrapper .main-header h1 {
     font-size: 2.5rem;
+  }
+}
+body .wrapper .count-msg,
+body .wrapper .author {
+  position: relative;
+  float: left;
+  width: 66.66666667%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: 16.66666667%;
+  padding: 0;
+}
+@media (min-width: 992px) {
+  body .wrapper .count-msg,
+  body .wrapper .author {
+    float: left;
+    width: 33.33333333%;
+  }
+}
+@media (min-width: 992px) {
+  body .wrapper .count-msg,
+  body .wrapper .author {
+    margin-left: 33.33333333%;
   }
 }
 @media (max-device-width: 767px) {
