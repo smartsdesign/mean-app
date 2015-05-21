@@ -84,6 +84,18 @@ body {
   font-size: 14px;
   font-family: consolas, sans-serif;
   background: #eeeeee;
+  position: relative;
+}
+body .ng-enter,
+body .ng-leave {
+  width: 100%;
+  position: absolute;
+}
+body .ng-enter {
+  -webkit-animation: zoomInDown 1.2s both ease-in;
+}
+body .ng-leave {
+  -webkit-animation: zoomOutDown 1.2s both ease-in;
 }
 body .wrapper {
   box-sizing: border-box;

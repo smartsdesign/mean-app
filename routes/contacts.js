@@ -10,8 +10,8 @@ basicRouter.get('/list', function (req, res, next) {
 });
 
 //get contact details
-basicRouter.get('/name/:contact', function (req, res){
-    // res.send('This is ' + req.params.contact + '\'s details');
+basicRouter.get('/name/:contact', function (req, res){  
+    res.send(req.params.contact + '\'s details view');
 });
 
 module.exports = basicRouter;

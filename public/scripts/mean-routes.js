@@ -4,9 +4,10 @@
 	angular
 		.module('meanRoutes', [
 			'ngRoute',
+			'ngAnimate',
 			'meanMainCtrl',
 			'aboutCtrl',
-			'meanContactCtrl'
+			'meanContactDetailsCtrl'
 		])
 		.config([
 			'$routeProvider',
@@ -27,10 +28,10 @@
 				"controller": "aboutController",
 				"controllerAs": "about"
 			})
-			.when('/name/:contact', {
+			.when('/contact/:name', {
 				"templateUrl": "ng-views/contact.html",
-				"controller": "contactController",
-				"controllerAs": "contact"
+				"controller": "contactDetailsController",
+				"controllerAs": "contactDetails"
 			})
 			.otherwise({
 				redirectTo: '/'

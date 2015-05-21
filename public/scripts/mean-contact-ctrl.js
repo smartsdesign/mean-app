@@ -2,29 +2,30 @@
 	'use strict';
 
 	angular
-		.module('meanContactCtrl', [
+		.module('meanContactDetailsCtrl', [
 			'meanRoutes',
 			'meanAppService'
 		])
-		.controller('contactController', [ 
+		.controller('contactDetailsController', [ 
 			'$log', 
 			'getContactsService', 
-			contactController
+			contactDetailsController
 		]);
 
-	function contactController($log, getContactsService){
+	function contactDetailsController($log, getContactsService){
 
 		var vm = this;
 
 		var onSuccess = function(data){
-			vm.contact = data;
+			vm.message = data;
+			console.log(vm.message);
 		};
 
 		var onErr = function(reason){
 			$log.log(reason.status);
 		};
 
-		getContactsService.getContact().then(onSuccess, onErr);
+		getContactsService.getContactDetails().then(onSuccess, onErr);
 	}
 
 }());

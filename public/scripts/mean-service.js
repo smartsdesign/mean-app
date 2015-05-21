@@ -13,9 +13,9 @@
 		};
 
 		//single contact
-		var getContact = function(){
+		var getContactDetails = function(){
 
-			return $http.get('/contacts/name/' + $routeParams.contact)
+			return $http.get('/contacts/name/' + $routeParams.name)
 				.then(function(response){
 					return response.data;
 				});
@@ -24,7 +24,7 @@
 
 		return {
 			"getAllContacts": getAllContacts,
-			"getContact": getContact
+			"getContactDetails": getContactDetails
 		};
 	};
 

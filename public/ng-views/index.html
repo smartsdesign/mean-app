@@ -2,7 +2,7 @@
 	<p class="count-msg">There are {{main.contacts.length}} contacts</p>
 	<ul>
 		<li ng-repeat="contact in main.contacts">
-            <a href="">
+            <a href="contact/{{contact.firstName}}">
                 <figure>
                     <img ng-src="{{contact.profImgUrl}}" alt="{{contact.firstName}} {{contact.lastName}}">
                 </figure>
