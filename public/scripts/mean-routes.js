@@ -4,7 +4,6 @@
 	angular
 		.module('meanRoutes', [
 			'ngRoute',
-			'ngAnimate',
 			'meanMainCtrl',
 			'aboutCtrl',
 			'meanContactDetailsCtrl'
