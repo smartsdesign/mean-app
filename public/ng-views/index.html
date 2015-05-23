@@ -1,7 +1,13 @@
 <div>
-	<p class="count-msg">There are {{main.contacts.length}} contacts</p>
+    <div class="sub-header">
+        <p class="count-msg">There are {{main.contacts.length}} contacts</p>
+        <form role="filter">
+            <label for="filter">Filter by firstname</label>
+            <input type="text" name="filter" ng-model="contacts.firstName">
+        </form>
+    </div>
 	<ul>
-		<li ng-repeat="contact in main.contacts">
+		<li ng-repeat="contact in main.contacts | filter:contacts.firstName">
             <a href="contact/{{contact.firstName}}">
                 <figure>
                     <img ng-src="{{contact.profImgUrl}}" alt="{{contact.firstName}} {{contact.lastName}}">
@@ -13,5 +19,7 @@
             </a>
 		</li>
 	</ul>
-	<a href="/about" class="author">Authored by: Samson Muhangi</a>
+    <div class="author">
+        <a href="/about">Authored by: Samson Muhangi</a>
+    </div>
 </div>

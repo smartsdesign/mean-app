@@ -1,5 +1,5 @@
-var express = require('express');
-var basicRouter = express.Router();
+var express = require('express'),
+	basicRouter = express.Router();
 
 /* GET contacts. */
 basicRouter.get('/list', function (req, res, next) {
@@ -11,7 +11,13 @@ basicRouter.get('/list', function (req, res, next) {
 
 //get contact details
 basicRouter.get('/name/:contact', function (req, res){  
-    res.send(req.params.contact + '\'s details view');
+    var db = res.db;
+    db.collection('contacts').find({ 
+    	'contacts.firstName': req.params.contact }, { 
+    		'contacts.$': 1 
+    	}).toArray(function (err, result){
+    	res.json(result);
+    });
 });
 
 module.exports = basicRouter;

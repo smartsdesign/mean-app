@@ -18,9 +18,7 @@
 		var vm = this;
 
 		var onSuccess = function(data){
-			console.log(data);
 			vm.contacts = data[0].contacts;
-			$log.log(vm.contacts);
 		};
 
 		var onErr = function(reason){
