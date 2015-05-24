@@ -52,12 +52,8 @@
 .panel-body:after,
 .modal-footer:before,
 .modal-footer:after,
-body .wrapper:before,
-body .wrapper:after,
 body .wrapper .sub-header:before,
 body .wrapper .sub-header:after,
-body .wrapper .sub-header form:before,
-body .wrapper .sub-header form:after,
 body .wrapper ul:before,
 body .wrapper ul:after,
 body .wrapper ul li a:before,
@@ -81,13 +77,60 @@ body .wrapper .author:after {
 .pager:after,
 .panel-body:after,
 .modal-footer:after,
-body .wrapper:after,
 body .wrapper .sub-header:after,
-body .wrapper .sub-header form:after,
 body .wrapper ul:after,
 body .wrapper ul li a:after,
 body .wrapper .author:after {
   clear: both;
+}
+/*forms*/
+.form-group {
+  display: inline-block;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+.form-control {
+  display: inline-block;
+  width: auto;
+  vertical-align: middle;
+}
+.form-control-static {
+  display: inline-block;
+}
+.input-group {
+  display: inline-table;
+  vertical-align: middle;
+}
+.input-group .input-group-addon,
+.input-group .input-group-btn,
+.input-group .form-control {
+  width: auto;
+}
+.input-group > .form-control {
+  width: 100%;
+}
+.control-label {
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+.radio,
+.checkbox {
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+.radio label,
+.checkbox label {
+  padding-left: 0;
+}
+.radio input[type="radio"],
+.checkbox input[type="checkbox"] {
+  position: relative;
+  margin-left: 0;
+}
+.has-feedback .form-control-feedback {
+  top: 0;
 }
 body {
   font-size: 14px;
@@ -96,12 +139,15 @@ body {
 }
 body .wrapper {
   box-sizing: border-box;
-  width: 85%;
-  margin-left: -15px;
-  margin-right: -15px;
   margin: auto;
   max-width: 1200px;
   padding: 0 23px 26px;
+}
+@media (min-width: 768px) {
+  body .wrapper {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
 }
 @media (max-device-width: 767px) {
   body .wrapper {
@@ -155,12 +201,11 @@ body .wrapper .main-header .container {
   }
 }
 body .wrapper .main-header h1 {
-  font-size: 35px;
   text-align: center;
 }
-@media (max-device-width: 767px) {
+@media (min-width: 768px) {
   body .wrapper .main-header h1 {
-    font-size: 2.5rem;
+    font-size: 35px;
   }
 }
 body .wrapper .sub-header {
@@ -168,8 +213,7 @@ body .wrapper .sub-header {
   margin-right: -15px;
 }
 body .wrapper .sub-header form {
-  margin-left: -15px;
-  margin-right: -15px;
+  box-sizing: border-box;
 }
 body .wrapper .sub-header form:before,
 body .wrapper .sub-header form:after {
@@ -186,9 +230,6 @@ body .wrapper .sub-header form:after {
 }
 body .wrapper .sub-header form:after {
   clear: both;
-}
-body .wrapper .sub-header form label {
-  /*.control-label();*/
 }
 body .wrapper .sub-header form input {
   box-sizing: border-box;
@@ -208,6 +249,16 @@ body .wrapper .sub-header form input {
   -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  display: inline-block;
+  width: auto;
+  vertical-align: middle;
+  position: relative;
+  float: left;
+  width: 83.33333333%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: 8.33333333%;
 }
 body .wrapper .sub-header form input:focus {
   border-color: #66afe9;
@@ -238,33 +289,36 @@ fieldset[disabled] body .wrapper .sub-header form input {
 textareabody .wrapper .sub-header form input {
   height: auto;
 }
-body .wrapper .sub-header .count-msg,
-body .wrapper .sub-header form {
-  position: relative;
-  float: left;
-  width: 66.66666667%;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: 16.66666667%;
-  padding: 0;
-}
 @media (min-width: 992px) {
-  body .wrapper .sub-header .count-msg,
-  body .wrapper .sub-header form {
+  body .wrapper .sub-header form input {
     float: left;
     width: 33.33333333%;
   }
 }
 @media (min-width: 992px) {
-  body .wrapper .sub-header .count-msg,
-  body .wrapper .sub-header form {
+  body .wrapper .sub-header form input {
     margin-left: 33.33333333%;
   }
 }
-@media (max-device-width: 767px) {
-  body .wrapper h4 {
-    font-size: 0.5rem;
+body .wrapper .sub-header .count-msg {
+  position: relative;
+  float: left;
+  width: 83.33333333%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: 8.33333333%;
+  padding: 0;
+}
+@media (min-width: 992px) {
+  body .wrapper .sub-header .count-msg {
+    float: left;
+    width: 33.33333333%;
+  }
+}
+@media (min-width: 992px) {
+  body .wrapper .sub-header .count-msg {
+    margin-left: 33.33333333%;
   }
 }
 body .wrapper ul {
@@ -272,11 +326,6 @@ body .wrapper ul {
   padding-left: 0;
   margin-left: -15px;
   margin-right: -15px;
-}
-@media (max-device-width: 767px) {
-  body .wrapper ul {
-    font-size: 2.5rem;
-  }
 }
 body .wrapper ul li {
   box-sizing: border-box;
@@ -287,11 +336,11 @@ body .wrapper ul li {
   border: 1px solid #dddddd;
   position: relative;
   float: left;
-  width: 66.66666667%;
+  width: 83.33333333%;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
-  margin-left: 16.66666667%;
+  margin-left: 8.33333333%;
   margin-bottom: 5px;
 }
 body .wrapper ul li:first-child {
@@ -418,21 +467,10 @@ body .wrapper ul li a div {
 body .wrapper ul li a div p {
   padding: 0 5px;
 }
-@media (max-device-width: 767px) {
-  body .wrapper p {
-    font-size: 2.5rem;
-  }
-}
 body .wrapper a:link,
 body .wrapper a:visited {
   text-decoration: none;
   border-bottom: 1px dashed #888;
-}
-@media (max-device-width: 767px) {
-  body .wrapper a:link,
-  body .wrapper a:visited {
-    font-size: 2.5rem;
-  }
 }
 body .wrapper a:hover,
 body .wrapper a:active {
