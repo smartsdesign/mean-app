@@ -59,7 +59,9 @@ body .wrapper ul:after,
 body .wrapper ul li a:before,
 body .wrapper ul li a:after,
 body .wrapper .author:before,
-body .wrapper .author:after {
+body .wrapper .author:after,
+.details-wrapper:before,
+.details-wrapper:after {
   content: " ";
   display: table;
 }
@@ -80,7 +82,8 @@ body .wrapper .author:after {
 body .wrapper .sub-header:after,
 body .wrapper ul:after,
 body .wrapper ul li a:after,
-body .wrapper .author:after {
+body .wrapper .author:after,
+.details-wrapper:after {
   clear: both;
 }
 /*forms*/
@@ -499,5 +502,50 @@ body .wrapper .author a {
 @media (min-width: 992px) {
   body .wrapper .author a {
     margin-left: 33.33333333%;
+  }
+}
+.details-wrapper {
+  box-sizing: border-box;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.details-wrapper .details {
+  box-sizing: border-box;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 992px) {
+  .details-wrapper .details {
+    float: left;
+    width: 33.33333333%;
+  }
+}
+@media (min-width: 992px) {
+  .details-wrapper .details {
+    margin-left: 33.33333333%;
+  }
+}
+.details-wrapper .details ul {
+  box-sizing: border-box;
+  margin-left: 0;
+  margin-right: 0;
+}
+.details-wrapper .details ul li {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 992px) {
+  .details-wrapper .details ul li {
+    float: left;
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .details-wrapper .details ul li {
+    margin-left: 0%;
   }
 }
