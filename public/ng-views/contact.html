@@ -3,11 +3,12 @@
     	<h2>Details</h2>
     	<a href="/">Back to index</a>
     	<ul>
-    		<li><span></span></li>
-    		<li><span></span></li>
-    		<li><span></span></li>
-    		<li><span></span></li>
-    		<li><span></span></li>
+    		<li><span>Firstname: </span>{{contactDetails.details.firstName}}</li>
+            <li><span>Lastname: </span>{{contactDetails.details.lastName}}</li>
+            <li><span>Email: </span>{{contactDetails.details.email}}</li>
+            <li><span>Tel no: </span>{{contactDetails.details.tel}}</li>
+            <li><span>Profession: </span>{{contactDetails.details.profession}}</li>
+            <li><span>Address: </span>{{contactDetails.details.address.houseNo}}, {{contactDetails.details.address.street}}, {{contactDetails.details.address.town}}, {{contactDetails.details.address.country}}</li>
     	</ul>
     </div>
 

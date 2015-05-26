@@ -17,7 +17,7 @@
 		var vm = this;
 
 		var onSuccess = function(data){
-			vm.details = data[0].contacts;
+			vm.details = data[0].contacts[0];
 			console.log(vm.details);
 		};
 
