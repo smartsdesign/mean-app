@@ -18,7 +18,6 @@
 			vm.messages = {
 				"about":  "Welcome"
 			};
-
 		}
-
+		
 }());
