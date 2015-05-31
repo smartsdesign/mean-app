@@ -7,7 +7,7 @@
     </div>
 	<ul>
 		<li ng-repeat="contact in main.contacts | filter:contacts.firstName">
-            <a href="contact/{{contact.firstName}}">
+            <a ng-href="contact/{{contact.firstName}}">
                 <figure>
                     <img ng-src="{{contact.profImgUrl}}" alt="{{contact.firstName}} {{contact.lastName}}">
                 </figure>

@@ -38,6 +38,11 @@ app.use(function (res, req, next){
 app.use('/', routes);
 app.use('/contacts', contacts);
 
+//middleware: make index page the entry point - fixes page refreshes and non-index entry points 
+app.get('*', function(req, res){
+    res.render('index');
+});
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
     var err = new Error('Not Found');
