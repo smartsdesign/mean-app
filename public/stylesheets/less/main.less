@@ -1,0 +1,156 @@
+body {
+	font-size: @font-size-base;
+	font-family: @font-family-base;
+	background: @grey-light;
+	margin: 0;
+
+	.wrapper {
+		box-sizing: border-box;
+		@media(min-width: @screen-sm-min){
+			.make-row();
+		}
+		@media (max-device-width: @screen-xs-max){
+			width: auto;	
+		}
+		margin: 0 auto;
+		padding: 0;
+	
+		.main-header {
+			.jumbotron();
+			margin-bottom: 0;
+			padding: 20px 0;
+			background: @blue-base;
+			color: @grey-light;
+			@media (min-width: @screen-sm-min){
+				padding: 20px 0;
+			}
+
+			h1 	{
+				@media (min-width: @screen-sm-min){
+					font-size: @font-size-h1;
+				}
+				text-align: center;
+				margin: 0;
+			}
+		}
+
+		.sub-header {
+			.make-row();
+
+			form {
+				box-sizing: border-box;
+				.clearfix();
+
+				input {
+					box-sizing: border-box;
+					.form-control();
+					.make-md-column(4);
+					.make-md-column-offset(4);
+					.make-xs-column(10);
+					.make-xs-column-offset(1);
+					box-shadow: 0 0 0;
+					border: none;
+					border-radius: 0;
+				}
+			}
+
+			.count-msg {
+				.make-md-column(4);
+				.make-md-column-offset(4);
+				.make-xs-column(10);
+				.make-xs-column-offset(1);
+				padding: 0;
+			}
+		}
+
+		ul {
+			.list-group();
+			.make-row();
+
+			li {
+				box-sizing: border-box;
+				.list-group-item();
+				.make-md-column(4);
+				.make-md-column-offset(4);
+				.make-sm-column(4);
+				.make-sm-column-offset(4);
+				.make-xs-column(10);
+				.make-xs-column-offset(1);
+				
+				margin-bottom: 5px;
+
+				&:nth-child(odd){
+					border-top: 2px solid #888;
+				}
+
+				&:nth-child(even){
+					border-top: 2px solid @blue-base;
+				}
+
+				a {
+					display: block;
+					.make-row();
+
+					&:link, 
+					&:visited {
+						border: none;
+					}
+
+					&:hover,
+					&:active {
+						opacity: 0.5;
+					}
+
+					figure {
+						box-sizing: border-box;
+						margin: 0;
+						width: 100px;
+						.make-md-column(3);
+						.make-md-column-offset(0);
+						.make-xs-column(6);
+						.make-xs-column-offset(3);
+
+						img {
+							max-width: 100%;
+						}
+					}
+
+					div {
+						box-sizing: border-box;
+						.make-md-column(6);
+						.make-xs-column(8);
+
+						p {
+							margin: 5px;
+							padding: 0 5px;
+						}
+					}
+				}
+			}
+		}
+
+		a {
+			&:link,
+			&:visited {
+				text-decoration: none;
+				border-bottom: 1px dashed #888;
+			}
+			&:hover,
+			&:active {
+				border-bottom: none;
+			}
+		}
+
+		.author {
+			.make-row();
+
+			a {
+				.make-md-column(4);
+				.make-md-column-offset(4);
+				.make-xs-column(10);
+				.make-xs-column-offset(1);
+				padding: 0;
+			}
+		}
+	}
+}

@@ -142,11 +142,12 @@ body {
   font-size: 14px;
   font-family: consolas, sans-serif;
   background: #eeeeee;
+  margin: 0;
 }
 body .wrapper {
   box-sizing: border-box;
-  margin: auto;
-  padding: 0 23px 26px;
+  margin: 0 auto;
+  padding: 0;
 }
 @media (min-width: 768px) {
   body .wrapper {
@@ -165,7 +166,9 @@ body .wrapper .main-header {
   color: inherit;
   background-color: #eeeeee;
   margin-bottom: 0;
-  padding: 0 15px;
+  padding: 20px 0;
+  background: #6495ed;
+  color: #eeeeee;
 }
 body .wrapper .main-header h1,
 body .wrapper .main-header .h1 {
@@ -202,11 +205,12 @@ body .wrapper .main-header .container {
 }
 @media (min-width: 768px) {
   body .wrapper .main-header {
-    padding: 0 10px;
+    padding: 20px 0;
   }
 }
 body .wrapper .main-header h1 {
   text-align: center;
+  margin: 0;
 }
 @media (min-width: 768px) {
   body .wrapper .main-header h1 {
@@ -412,6 +416,23 @@ body .wrapper ul li.active:focus .list-group-item-text {
     margin-left: 33.33333333%;
   }
 }
+@media (min-width: 768px) {
+  body .wrapper ul li {
+    float: left;
+    width: 33.33333333%;
+  }
+}
+@media (min-width: 768px) {
+  body .wrapper ul li {
+    margin-left: 33.33333333%;
+  }
+}
+body .wrapper ul li:nth-child(odd) {
+  border-top: 2px solid #888;
+}
+body .wrapper ul li:nth-child(even) {
+  border-top: 2px solid #6495ed;
+}
 body .wrapper ul li a {
   display: block;
   margin-left: -15px;
@@ -532,24 +553,25 @@ body .wrapper .author a {
   margin-left: 0;
   margin-right: 0;
 }
-.details-wrapper .details ul li {
+.wrapper .details-wrapper .details ul li {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
+  border: none;
 }
 @media (min-width: 992px) {
-  .details-wrapper .details ul li {
+  .wrapper .details-wrapper .details ul li {
     float: left;
     width: 100%;
   }
 }
 @media (min-width: 992px) {
-  .details-wrapper .details ul li {
+  .wrapper .details-wrapper .details ul li {
     margin-left: 0%;
   }
 }
-.details-wrapper .details ul li span {
+.wrapper .details-wrapper .details ul li span {
   font-weight: bold;
 }
 .about-wrapper {
