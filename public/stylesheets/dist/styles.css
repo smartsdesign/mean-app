@@ -413,7 +413,7 @@ body .wrapper ul {
   margin-left: -15px;
   margin-right: -15px;
   padding-top: 210px;
-  margin-top: 0;
+  margin: 0;
 }
 body .wrapper ul li {
   box-sizing: border-box;
