@@ -6,7 +6,7 @@
         box-sizing: border-box;
         .make-md-column(4);
         .make-md-column-offset(4);
-        padding-top: 100px;
+        padding-top: 80px;
 
         .wrapper & ul {
             box-sizing: border-box;
@@ -28,6 +28,12 @@
         h2, a {
             @media (max-width: @screen-xs-max){
                 margin-left: 34px;
+            }
+        }
+
+        h2 {
+            span {
+                font-style: italic;
             }
         }
 
