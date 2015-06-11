@@ -6,14 +6,12 @@ body {
 
 	.wrapper {
 		box-sizing: border-box;
-		@media(min-width: @screen-sm-min){
-			.make-row();
-		}
+		margin: 0;
+		padding: 0;
+		
 		@media (max-device-width: @screen-xs-max){
 			width: auto;	
 		}
-		margin: 0 auto;
-		padding: 0;
 	
 		.main-header {
 			.jumbotron();
@@ -21,6 +19,9 @@ body {
 			padding: 20px 0;
 			background: @blue-base;
 			color: @grey-light;
+			position: fixed;
+			width: 100%;
+			z-index: 2;
 			@media (min-width: @screen-sm-min){
 				padding: 20px 0;
 			}
@@ -36,6 +37,12 @@ body {
 
 		.sub-header {
 			.make-row();
+			padding-top: 100px;
+			position: fixed;
+			z-index: 1;
+			width: 100%;
+			background: #eee;
+			margin: 0;
 
 			form {
 				box-sizing: border-box;
@@ -66,6 +73,8 @@ body {
 		ul {
 			.list-group();
 			.make-row();
+			padding-top: 210px;
+			margin-top: 0;
 
 			li {
 				box-sizing: border-box;
