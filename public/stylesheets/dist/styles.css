@@ -86,6 +86,11 @@ body .wrapper ul li a:after,
 .about-wrapper:after {
   clear: both;
 }
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('../fonts/glyphicons-halflings-regular.eot');
+  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
 /*forms*/
 .form-group {
   display: inline-block;
@@ -574,6 +579,29 @@ body .wrapper a:active {
   .details-wrapper .details a {
     margin-left: 34px;
   }
+}
+.details-wrapper .details a:link,
+.details-wrapper .details a:visited {
+  padding-right: 15px;
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-decoration: none;
+  line-height: 2;
+}
+.details-wrapper .details a:link:before,
+.details-wrapper .details a:visited:before {
+  content: "\e132";
+}
+.details-wrapper .details a:hover,
+.details-wrapper .details a:active {
+  opacity: 0.5;
 }
 .about-wrapper {
   box-sizing: border-box;
