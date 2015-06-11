@@ -58,8 +58,6 @@ body .wrapper ul:before,
 body .wrapper ul:after,
 body .wrapper ul li a:before,
 body .wrapper ul li a:after,
-body .wrapper .author:before,
-body .wrapper .author:after,
 .details-wrapper:before,
 .details-wrapper:after,
 .about-wrapper:before,
@@ -84,7 +82,6 @@ body .wrapper .author:after,
 body .wrapper .sub-header:after,
 body .wrapper ul:after,
 body .wrapper ul li a:after,
-body .wrapper .author:after,
 .details-wrapper:after,
 .about-wrapper:after {
   clear: both;
@@ -246,7 +243,6 @@ body .wrapper .sub-header form:after {
 body .wrapper .sub-header form input {
   box-sizing: border-box;
   display: block;
-  width: 100%;
   height: 34px;
   padding: 6px 12px;
   font-size: 14px;
@@ -266,13 +262,14 @@ body .wrapper .sub-header form input {
   vertical-align: middle;
   position: relative;
   float: left;
-  width: 83.33333333%;
+  width: 100%;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
-  margin-left: 8.33333333%;
+  margin-left: 0%;
   box-shadow: 0 0 0;
   border: none;
+  border-bottom: 1px solid #6495ed;
   border-radius: 0;
 }
 body .wrapper .sub-header form input:focus {
@@ -315,15 +312,26 @@ textareabody .wrapper .sub-header form input {
     margin-left: 33.33333333%;
   }
 }
+@media (min-width: 768px) {
+  body .wrapper .sub-header form input {
+    float: left;
+    width: 50%;
+  }
+}
+@media (min-width: 768px) {
+  body .wrapper .sub-header form input {
+    margin-left: 25%;
+  }
+}
 body .wrapper .sub-header .count-msg {
   position: relative;
   float: left;
-  width: 83.33333333%;
+  width: 100%;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
-  margin-left: 8.33333333%;
-  padding: 0;
+  margin-left: 0%;
+  padding: 0 12px;
 }
 @media (min-width: 992px) {
   body .wrapper .sub-header .count-msg {
@@ -334,6 +342,17 @@ body .wrapper .sub-header .count-msg {
 @media (min-width: 992px) {
   body .wrapper .sub-header .count-msg {
     margin-left: 33.33333333%;
+  }
+}
+@media (min-width: 768px) {
+  body .wrapper .sub-header .count-msg {
+    float: left;
+    width: 50%;
+  }
+}
+@media (min-width: 768px) {
+  body .wrapper .sub-header .count-msg {
+    margin-left: 25%;
   }
 }
 body .wrapper ul {
@@ -432,12 +451,6 @@ body .wrapper ul li.active:focus .list-group-item-text {
     margin-left: 33.33333333%;
   }
 }
-body .wrapper ul li:nth-child(odd) {
-  border-top: 2px solid #888;
-}
-body .wrapper ul li:nth-child(even) {
-  border-top: 2px solid #6495ed;
-}
 body .wrapper ul li a {
   display: block;
   margin-left: -15px;
@@ -505,31 +518,6 @@ body .wrapper a:hover,
 body .wrapper a:active {
   border-bottom: none;
 }
-body .wrapper .author {
-  margin-left: -15px;
-  margin-right: -15px;
-}
-body .wrapper .author a {
-  position: relative;
-  float: left;
-  width: 83.33333333%;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: 8.33333333%;
-  padding: 0;
-}
-@media (min-width: 992px) {
-  body .wrapper .author a {
-    float: left;
-    width: 33.33333333%;
-  }
-}
-@media (min-width: 992px) {
-  body .wrapper .author a {
-    margin-left: 33.33333333%;
-  }
-}
 .details-wrapper {
   box-sizing: border-box;
   margin-left: -15px;
@@ -541,6 +529,7 @@ body .wrapper .author a {
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
+  padding-top: 100px;
 }
 @media (min-width: 992px) {
   .details-wrapper .details {
@@ -553,10 +542,11 @@ body .wrapper .author a {
     margin-left: 33.33333333%;
   }
 }
-.details-wrapper .details ul {
+.wrapper .details-wrapper .details ul {
   box-sizing: border-box;
   margin-left: 0;
   margin-right: 0;
+  padding-top: 20px;
 }
 .wrapper .details-wrapper .details ul li {
   position: relative;
@@ -578,6 +568,12 @@ body .wrapper .author a {
 }
 .wrapper .details-wrapper .details ul li span {
   font-weight: bold;
+}
+@media (max-width: 767px) {
+  .details-wrapper .details h2,
+  .details-wrapper .details a {
+    margin-left: 34px;
+  }
 }
 .about-wrapper {
   box-sizing: border-box;

@@ -6,13 +6,15 @@
 		box-sizing: border-box;
 		.make-md-column(4);
 		.make-md-column-offset(4);
+		padding-top: 100px;
 
-		ul {
+		.wrapper & ul {
 			box-sizing: border-box;
 			margin-left: 0;
 			margin-right: 0;
+			padding-top: 20px;
 
-.wrapper & li {
+			li {
 				.make-md-column(12);
 				.make-md-column-offset(0);
 				border: none;
@@ -20,6 +22,12 @@
 				span {
 					font-weight: bold;
 				}
+			}
+		}
+
+		h2, a {
+			@media (max-width: @screen-xs-max){
+				margin-left: 34px;
 			}
 		}
 	}
